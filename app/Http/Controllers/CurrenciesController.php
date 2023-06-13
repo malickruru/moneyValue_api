@@ -53,6 +53,7 @@ class CurrenciesController extends ApiController
             'flag' => "/img/" . $path,
             'code' => $request->code,
             'name' => $request->name,
+            'symbol' => $request->symbol,
         ]);
 
         return $this->success($currency, 'Devise ajoutée avec succès');
@@ -101,6 +102,7 @@ class CurrenciesController extends ApiController
         $currency->flag = $request->flag != null ? "/img/" . $path : $currency->flag;
         $currency->code = $request->code != null ? $request->code : $currency->code;
         $currency->name = $request->name != null ? $request->name : $currency->name;
+        $currency->symbol = $request->symbol != null ? $request->symbol : $currency->symbol;
 
         $currency->save();
 

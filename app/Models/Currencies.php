@@ -20,6 +20,7 @@ class Currencies extends Model
         'code',
         'name',
         'flag',
+        'symbol'
     ];
 
     public function pair(){
