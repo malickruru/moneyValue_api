@@ -11,6 +11,7 @@ class ApiController extends Controller
     public function success($data, string $message = null, int $code = 200)
     {
         return response()->json([
+            'status' => $code,
             'message' => $message,
             'data' => $data
         ], $code);
@@ -20,6 +21,7 @@ class ApiController extends Controller
     {
         // dd($code);
         return response()->json([
+            'status' => $code,
             'message' => $message,
             'data' => $data
         ], $code);
